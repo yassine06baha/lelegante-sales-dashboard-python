@@ -24,7 +24,3 @@ python app.py
 ```
 
 Puis ouvrir `http://127.0.0.1:5000`.
-
-## Niveau
-
-Intermédiaire : routing Flask, requêtes SQL agrégées, API REST, rendu dynamique côté navigateur.
