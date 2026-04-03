@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Élégante | Dashboard Ventes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="dashboard-shell">
+        <header class="hero">
+            <p class="eyebrow">L'Élégante Analytics</p>
+            <h1>Dashboard ventes et stock boutique</h1>
+            <p class="hero-text">
+                Suivi des performances commerciales, du top produit et des articles à réapprovisionner.
+            </p>
+        </header>
+
+        <section class="kpi-grid">
+            <article class="kpi-card">
+                <span>Chiffre d'affaires</span>
+                <strong id="revenueValue">--</strong>
+            </article>
+            <article class="kpi-card">
+                <span>Unités vendues</span>
+                <strong id="unitsValue">--</strong>
+            </article>
+            <article class="kpi-card">
+                <span>Alertes stock</span>
+                <strong id="stockAlertValue">--</strong>
+            </article>
+            <article class="kpi-card">
+                <span>Top produit</span>
+                <strong id="bestProductValue">--</strong>
+            </article>
+        </section>
+
+        <section class="content-grid">
+            <article class="panel">
+                <div class="panel-header">
+                    <h2>Catalogue et stock</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Catégorie</th>
+                            <th>Prix</th>
+                            <th>Stock</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsBody"></tbody>
+                </table>
+            </article>
+
+            <article class="panel">
+                <div class="panel-header">
+                    <h2>Ventes par jour</h2>
+                </div>
+                <div id="salesChart" class="sales-chart"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
